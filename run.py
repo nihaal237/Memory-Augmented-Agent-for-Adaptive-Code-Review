@@ -1,25 +1,31 @@
-import sqlite3
+import json
 
-conn = sqlite3.connect("agent_memory.db")
-cursor = conn.cursor()
+PR_DATA_PATH = "pr_data_scikit-learn.json"
 
-cursor.execute("""
-    SELECT convention_text, category, times_confirmed, source_pr_number 
-    FROM conventions 
-    WHERE active = 1 
-    ORDER BY times_confirmed DESC, id ASC
-""")
+with open(PR_DATA_PATH, "r", encoding="utf-8") as f:
+    pr_data = json.load(f)
 
-rows = cursor.fetchall()
-print(f"Total active conventions: {len(rows)}\n")
+# Exclude the first 30 (already used for seeding memory)
+candidate_pool = pr_data[30:]
 
-print("=== Reinforced conventions (times_confirmed > 1) ===")
-reinforced_count = 0
-for text, category, count, pr in rows:
-    if count > 1:
-        print(f"[{count}x] ({category}) {text}")
-        reinforced_count += 1
+print(f"Total candidate PRs (excluding seeded 30): {len(candidate_pool)}\n")
 
-print(f"\n({reinforced_count} conventions reinforced 2+ times, out of {len(rows)} total)")
+thresholds = [1, 2, 3, 5, 10]
+for t in thresholds:
+    count = sum(1 for pr in candidate_pool if len(pr.get("review_comments", [])) >= t)
+    print(f"PRs with >= {t} review comments: {count}")
 
-conn.close()
+# Show the actual distribution of comment counts, sorted
+counts = sorted(
+    [(pr["pr_number"], len(pr.get("review_comments", []))) for pr in candidate_pool],
+    key=lambda x: x[1],
+    reverse=True
+)
+
+print("\nTop 15 PRs by comment count (in this pool):")
+for pr_number, count in counts[:15]:
+    print(f"  PR #{pr_number}: {count} comments")
+
+print("\nBottom 10 PRs by comment count (in this pool):")
+for pr_number, count in counts[-10:]:
+    print(f"  PR #{pr_number}: {count} comments")

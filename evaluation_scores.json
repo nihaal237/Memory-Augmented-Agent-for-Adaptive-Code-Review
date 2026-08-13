@@ -1,0 +1,302 @@
+[
+  {
+    "pr_number": 34321,
+    "title": "ENH: add array API support for specific methods in the private `loss` module",
+    "memory_on_score": {
+      "overlap": 5,
+      "false_positives": 10,
+      "actionability": 9
+    },
+    "memory_off_score": {
+      "overlap": 6,
+      "false_positives": 8,
+      "actionability": 10
+    },
+    "reasoning": "AI A identifies the core issues of missing implementation and an incomplete docstring with good actionability, while AI B provides slightly more specific guidance on these points. However, AI B introduces an additional, plausible inconsistency not raised by human reviewers, which lowers its false positive score compared to A's strict adherence to the human-identified issues."
+  },
+  {
+    "pr_number": 34417,
+    "title": "DOC Fix typos and improve wording in `plot_cost_sensitive_learning.py`",
+    "memory_on_score": {
+      "overlap": 4,
+      "false_positives": 10,
+      "actionability": 10
+    },
+    "memory_off_score": {
+      "overlap": 4,
+      "false_positives": 10,
+      "actionability": 10
+    },
+    "reasoning": "Both AI reviews accurately identify the same positive wording improvement (data set to dataset, adding 'is') which aligns with a human suggestion. While they missed the other specific wording suggestions from humans, they both correctly identify a critical issue of a truncated sentence at L375, demonstrating strong issue detection and actionability for valid concerns."
+  },
+  {
+    "pr_number": 34092,
+    "title": "MNT Deprecate `multiclass_colors` in favour of `label_colors` in `DecisionBoundaryDisplay`",
+    "memory_on_score": {
+      "overlap": 1,
+      "false_positives": 3,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 2,
+      "false_positives": 2,
+      "actionability": 0
+    },
+    "reasoning": "Both AI reviews provide superficial, positive assessments that entirely miss the specific questions and actionable suggestions raised by human reviewers. Crucially, both also hallucinate the new parameter name as `target_colors` instead of `label_colors`, a major factual error. AI A is marginally better in overlap due to slightly more descriptive content, but this also results in more incorrect claims about the PR's quality compared to the human review."
+  },
+  {
+    "pr_number": 34136,
+    "title": "DOC add section on `matplotlib` usage within the display classes",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 7,
+      "actionability": 8
+    },
+    "reasoning": "Neither AI review identified the critical issue of fragile line number references that the human reviewers highlighted. AI A found no issues, offering no actionable feedback, while AI B raised a minor grammatical point that was actionable but irrelevant to the human review's focus."
+  },
+  {
+    "pr_number": 34155,
+    "title": "DOC Add horizontal scrolling for wide dataframes",
+    "memory_on_score": {
+      "overlap": 5,
+      "false_positives": 10,
+      "actionability": 2
+    },
+    "memory_off_score": {
+      "overlap": 7,
+      "false_positives": 10,
+      "actionability": 3
+    },
+    "reasoning": "AI Review B provides a direct explanation for why `display: block;` is crucial, which directly addresses a key question from the human review, an aspect missing from AI Review A. Both AI reviews, however, fail to identify the human-observed bug regarding the scrollbar's visibility or offer specific code suggestions."
+  },
+  {
+    "pr_number": 34288,
+    "title": "DOC small docstring improvements to LogisticRegression",
+    "memory_on_score": {
+      "overlap": 2,
+      "false_positives": 8,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 2,
+      "false_positives": 4,
+      "actionability": 9
+    },
+    "reasoning": "AI B provided highly actionable feedback for an issue it found, which AI A entirely lacked, concluding with 'no issues found'. However, AI B also made a significant false positive claim about the correctness of references, directly contradicting human feedback."
+  },
+  {
+    "pr_number": 34336,
+    "title": "ENH Newton-CD part 2: add early_stopping to CD solvers",
+    "memory_on_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 9
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 9
+    },
+    "reasoning": "Both AI reviews successfully identified the primary substantive point from the human comments regarding the gap_smaller_eps documentation, but neither caught the minor style preference. Both also provided highly relevant and actionable feedback, particularly concerning the incomplete code diff, adding significant value beyond the human review's scope."
+  },
+  {
+    "pr_number": 34343,
+    "title": "TST strengthen histogram binning checks",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 9,
+      "actionability": 9
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 7,
+      "actionability": 9
+    },
+    "reasoning": "Both AI reviews completely missed the specific `random_state` and `subsample` issues raised by the human reviewers, resulting in 0 overlap for both. AI A scored higher on false positives because all its points were code-related and appeared to be valid observations of potential issues, whereas AI B included an irrelevant 'AI Usage Disclosure' point."
+  },
+  {
+    "pr_number": 33959,
+    "title": "MNT use narwhals in indexable",
+    "memory_on_score": {
+      "overlap": 7,
+      "false_positives": 10,
+      "actionability": 3
+    },
+    "memory_off_score": {
+      "overlap": 6,
+      "false_positives": 10,
+      "actionability": 10
+    },
+    "reasoning": "AI B demonstrates a stronger understanding of the PR's alignment with the human reviewer's primary concerns regarding test refactoring and comprehensive dataframe coverage, explicitly praising the changes. AI A, while also touching on test coverage, excels more in identifying specific actionable issues like typos and inconsistencies not found by human reviewers."
+  },
+  {
+    "pr_number": 34419,
+    "title": "CI Update CI lock files [doc build]",
+    "memory_on_score": {
+      "overlap": 6,
+      "false_positives": 10,
+      "actionability": 5
+    },
+    "memory_off_score": {
+      "overlap": 6,
+      "false_positives": 4,
+      "actionability": 8
+    },
+    "reasoning": "AI A provided a more accurate assessment without flagging non-issues, leading to a higher false_positives score. AI B's primary concern about `ca-certificate` removal appears to be a false positive given the human reviewer's success, but its recommendation was more actionable."
+  },
+  {
+    "pr_number": 34423,
+    "title": "FEA Add array API support for matthews_corrcoef",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 1,
+      "actionability": 7
+    },
+    "memory_off_score": {
+      "overlap": 3,
+      "false_positives": 4,
+      "actionability": 9
+    },
+    "reasoning": "AI B is superior to AI A, as AI B identifies a common Array API migration pattern and correctly flags a comment issue, whereas AI A completely misses the mark with a major false positive regarding missing implementation. While AI B includes several issues not highlighted by the human review, its actionable advice and partial overlap on the comment issue make it more useful."
+  },
+  {
+    "pr_number": 34405,
+    "title": ":lock: :robot: CI Update lock files for lint CI build(s) :lock: :robot:",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0
+    },
+    "reasoning": "Both AI reviews accurately described the code change but completely missed all the substantive issues, questions, and discussions (regarding scope, overlapping PRs, and conflicts) raised by the human reviewers. They both concluded 'No issues found,' which directly contradicted the human feedback, making them equally unhelpful."
+  },
+  {
+    "pr_number": 33876,
+    "title": "FIX Slice Y_norm_squared alongside Y in _parallel_pairwise",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0
+    },
+    "reasoning": "Both AI reviews provided only positive feedback, completely missing the specific issues raised by human reviewers regarding the changelog content and the lack of clarity/documentation in the code for `Y_norm_squared` handling, making them non-overlapping and non-actionable."
+  },
+  {
+    "pr_number": 33827,
+    "title": "FIX metadata routing shouldn't deep copy estimator",
+    "memory_on_score": {
+      "overlap": 6,
+      "false_positives": 10,
+      "actionability": 2
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 9
+    },
+    "reasoning": "Both AI reviews accurately summarize the problem and the core solution. However, AI Review B excels in actionability by identifying a potential incompleteness in the MetadataRouter's __sklearn_clone__ implementation, which aligns with the detailed, constructive feedback given by human reviewers regarding implementation correctness. AI Review A, while accurate, acts more as an approval, offering no new actionable insights."
+  },
+  {
+    "pr_number": 34129,
+    "title": "DOC document Array API limitation for LogisticRegression.sparsify",
+    "memory_on_score": {
+      "overlap": 1,
+      "false_positives": 9,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 3,
+      "false_positives": 9,
+      "actionability": 0
+    },
+    "reasoning": "Both AI reviews completely missed a critical actionable instruction to remove a documentation change in one file. While both recognized the general topic of the second issue (a warning about `sparsify` with Array API), they praised the warning text that the human reviewer explicitly suggested needed to be expressed 'more carefully/generally'. AI B showed slightly higher overlap by detailing the limitation's specifics in a way that mirrored the human's problem description, unlike AI A's more superficial assessment."
+  },
+  {
+    "pr_number": 34077,
+    "title": "FIX metaedata routing with dask backend on joblib",
+    "memory_on_score": {
+      "overlap": 6,
+      "false_positives": 8,
+      "actionability": 5
+    },
+    "memory_off_score": {
+      "overlap": 7,
+      "false_positives": 9,
+      "actionability": 6
+    },
+    "reasoning": "AI Review B showed slightly better contextual understanding by explicitly connecting the core change (Bunch to dictionary) to the Dask/Joblib backend, a key aspect of the PR title and human context. Both A and B successfully identified major structural changes but missed the specific, granular suggestions and the critical technical correction found in the human reviews."
+  },
+  {
+    "pr_number": 33892,
+    "title": "DOC fix colors and add support vectors in SVC with iris dataset example",
+    "memory_on_score": {
+      "overlap": 2,
+      "false_positives": 3,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 7,
+      "false_positives": 9,
+      "actionability": 10
+    },
+    "reasoning": "AI A correctly identifies that it cannot perform a full review due to missing code related to the PR's main goal, aligning its anticipated review scope with the human discussion. In contrast, AI B provides a superficial approval based only on documentation changes, completely missing the substantive visual and design questions raised by human reviewers."
+  },
+  {
+    "pr_number": 33845,
+    "title": "Fix color conversion to rgb hexstring",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 9,
+      "actionability": 9
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 9,
+      "actionability": 9
+    },
+    "reasoning": "Both AI reviews fail to identify any of the specific issues raised by the human reviewers, instead offering positive affirmations and different minor suggestions. Each AI provides one highly actionable suggestion not present in the human review."
+  },
+  {
+    "pr_number": 34337,
+    "title": "ENH Newton-CD part 4: Add memory buffer for pointwise gradients and hessians to LinearModelLoss and NewtonCholeskySolver",
+    "memory_on_score": {
+      "overlap": 3,
+      "false_positives": 2,
+      "actionability": 1
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 9
+    },
+    "reasoning": "AI Review A effectively identifies missing implementation details and a discrepancy between the PR description and code, prompting actionable next steps for the author, aligning well with the human review's intent to seek clarification and justification. In contrast, AI Review B, while correctly noting one benefit, completely overlooks critical questions and concerns raised by human reviewers, instead offering an inaccurate all-clear assessment."
+  },
+  {
+    "pr_number": 34048,
+    "title": "DOC: Clarify that support vectors in SVMs can be sparse",
+    "memory_on_score": {
+      "overlap": 3,
+      "false_positives": 0,
+      "actionability": 0
+    },
+    "memory_off_score": {
+      "overlap": 5,
+      "false_positives": 10,
+      "actionability": 10
+    },
+    "reasoning": "AI A demonstrates strong analytical ability by correctly addressing the sparsity of `coef_` and identifying a factual error regarding `dual_coef_`, but misses the clear `support_vectors_` suggestion. AI B offers only generic praise, incorrectly approves the `dual_coef_` change, and misses key human feedback."
+  }
+]

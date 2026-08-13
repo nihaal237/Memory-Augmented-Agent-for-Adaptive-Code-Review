@@ -1,0 +1,342 @@
+[
+  {
+    "pr_number": 34321,
+    "title": "ENH: add array API support for specific methods in the private `loss` module",
+    "memory_on_score": {
+      "overlap": 2,
+      "false_positives": 10,
+      "actionability": 6,
+      "reasoning": "The AI review broadly identifies the PR's subject matter but largely misses the specific implementation, design, and docstring content issues and concrete code suggestions raised by human reviewers."
+    },
+    "memory_off_score": {
+      "overlap": 7,
+      "false_positives": 10,
+      "actionability": 10,
+      "reasoning": "The AI review correctly identified the core issues of missing `gradient_hessian` implementation and its incomplete docstring, aligning with the most significant human comments, although it missed several more granular suggestions."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34417,
+    "title": "DOC Fix typos and improve wording in `plot_cost_sensitive_learning.py`",
+    "memory_on_score": {
+      "overlap": 6,
+      "false_positives": 10,
+      "actionability": 9,
+      "reasoning": "The AI review identified one specific wording improvement (L159-160) that aligned with a human comment and also found another valid wording issue in a section (L375) where humans also provided feedback, though on different specific phrases."
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 10,
+      "reasoning": "The AI review did not identify any of the specific typos, wording improvements, or feature suggestions that the human reviewers raised."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  },
+  {
+    "pr_number": 34092,
+    "title": "MNT Deprecate `multiclass_colors` in favour of `label_colors` in `DecisionBoundaryDisplay`",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 0,
+      "actionability": 0,
+      "reasoning": "The AI review fails to address any of the specific concerns or detailed discussions raised by human reviewers, and critically misidentifies the new parameter name (`target_colors` instead of `label_colors`) being introduced by the pull request."
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review completely missed all specific questions, suggestions, and strategic discussions raised by human reviewers, offering only a generic positive assessment."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34136,
+    "title": "DOC add section on `matplotlib` usage within the display classes",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review completely missed the specific documentation formatting issue (fragile line number references) that human reviewers identified as needing a change."
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 10,
+      "reasoning": "The AI review entirely missed the human reviewers' main concern about using fragile line number references in documentation."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34155,
+    "title": "DOC Add horizontal scrolling for wide dataframes",
+    "memory_on_score": {
+      "overlap": 3,
+      "false_positives": 7,
+      "actionability": 1,
+      "reasoning": "The AI correctly identifies the core CSS properties for the fix but misses critical human concerns regarding justification, a potential UX bug (invisible scrollbar), and explicit suggestions for selector refinement and adding an explanatory comment."
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review discussed the same core elements (CSS properties, selector, and comment) that human reviewers were focused on, but missed specific questions about justification and scrollbar visibility."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  },
+  {
+    "pr_number": 34288,
+    "title": "DOC small docstring improvements to LogisticRegression",
+    "memory_on_score": {
+      "overlap": 3,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review only explicitly captured one out of several specific issues or suggestions raised by the human reviewers (the random_state clarification), primarily describing positive changes rather than flagging the specific issues/suggestions or the factual concern found by humans."
+    },
+    "memory_off_score": {
+      "overlap": 3,
+      "false_positives": 10,
+      "actionability": 9,
+      "reasoning": "The AI correctly identified one specific improvement also noted by humans, but it missed multiple other specific suggestions and accuracy concerns, and contradicted human findings by praising sections where humans identified issues."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34336,
+    "title": "ENH Newton-CD part 2: add early_stopping to CD solvers",
+    "memory_on_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 9,
+      "reasoning": "The AI effectively captures the primary substantive concern of the human reviewers by positively remarking on the clarity of the `gap_smaller_eps` documentation, which was the focus of most human comment suggestions."
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 4,
+      "actionability": 6,
+      "reasoning": "The AI correctly identified and praised the `gap_smaller_eps` explanations, which constituted the bulk of the substantive human review comments."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  },
+  {
+    "pr_number": 34343,
+    "title": "TST strengthen histogram binning checks",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 0,
+      "actionability": 9,
+      "reasoning": "The AI review did not mention any of the specific issues or concerns raised by the human reviewers, focusing instead on entirely different aspects of the code."
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 2,
+      "actionability": 8,
+      "reasoning": "The AI review completely missed all specific code-level concerns and suggestions raised by the human reviewers, focusing instead on different high-level aspects of the pull request."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 33959,
+    "title": "MNT use narwhals in indexable",
+    "memory_on_score": {
+      "overlap": 3,
+      "false_positives": 10,
+      "actionability": 1,
+      "reasoning": "The AI review only identified the positive test refactoring and multi-backend support, completely missing critical issues like docstring updates, __getitem__ semantics, and significant architectural concerns raised by human reviewers."
+    },
+    "memory_off_score": {
+      "overlap": 3,
+      "false_positives": 9,
+      "actionability": 10,
+      "reasoning": "The AI review missed critical discussions about the architectural implications of narwhals surfacing to users and the public/private API boundary, as well as specific documentation and test merging suggestions made by human reviewers."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34419,
+    "title": "CI Update CI lock files [doc build]",
+    "memory_on_score": {
+      "overlap": 6,
+      "false_positives": 9,
+      "actionability": 8,
+      "reasoning": "The AI review effectively identified and commented on the CI lock file updates and the problematic Cython versions, which were key aspects of the human discussion, but completely missed the detailed feedback and suggestions related to the `plot_permutation_importance.py` example file."
+    },
+    "memory_off_score": {
+      "overlap": 2,
+      "false_positives": 7,
+      "actionability": 9,
+      "reasoning": "The AI review completely missed all human discussion around the `plot_permutation_importance.py` file and only tangentially overlapped on the lock file discussions regarding Cython versions."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34423,
+    "title": "FEA Add array API support for matthews_corrcoef",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 1,
+      "actionability": 8,
+      "reasoning": "The AI entirely missed the human reviewers' primary concern regarding the specific handling of integer types with __truediv__ in the Array API and instead focused on an unrelated, and seemingly incorrect, claim of missing core calculations."
+    },
+    "memory_off_score": {
+      "overlap": 1,
+      "false_positives": 10,
+      "actionability": 10,
+      "reasoning": "The AI review missed the primary technical discussion by human reviewers regarding `__truediv__` behavior with integer types in the Array API spec, and the resulting need for float conversion and a precise code comment, only tangentially identifying an 'incomplete comment' without addressing its substance."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34405,
+    "title": ":lock: :robot: CI Update lock files for lint CI build(s) :lock: :robot:",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review completely missed all substantive issues raised by human reviewers, including questions about additional dependency locking, potential PR overlap, and conflict resolution needs."
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review completely fails to identify any of the strategic questions, potential redundancies, or conflict resolution needs raised by the human reviewers."
+    },
+    "tag": "meta/process (not a real review test)"
+  },
+  {
+    "pr_number": 33876,
+    "title": "FIX Slice Y_norm_squared alongside Y in _parallel_pairwise",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review did not capture any of the specific issues or concerns raised by the human reviewers, instead offering generic praise for areas where humans identified problems or providing irrelevant positive feedback."
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review completely missed the two specific issues raised by human reviewers regarding documentation content and code clarity, instead providing a generally positive summary."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  },
+  {
+    "pr_number": 33827,
+    "title": "FIX metadata routing shouldn't deep copy estimator",
+    "memory_on_score": {
+      "overlap": 1,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review merely validates the final state of the PR, confirming the fix and its implementation, but completely misses the substantive design concerns, alternative suggestions, and specific implementation details that were actively discussed and debated by human reviewers."
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 10,
+      "reasoning": "The AI review captured the primary problem (deepcopy issues) and the general solution (using clone and __sklearn_clone__) that human reviewers emphasized, along with the core cloning logic for MethodMetadataRequest, but missed some finer implementation details and discussions about call sites."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34129,
+    "title": "DOC document Array API limitation for LogisticRegression.sparsify",
+    "memory_on_score": {
+      "overlap": 2,
+      "false_positives": 3,
+      "actionability": 0,
+      "reasoning": "The AI completely missed the instruction to remove a specific documentation change and only vaguely acknowledged the issue with `sparsify` and Array API by praising an existing warning without addressing its nuances or suggesting improvements."
+    },
+    "memory_off_score": {
+      "overlap": 6,
+      "false_positives": 10,
+      "actionability": 2,
+      "reasoning": "The AI captured the specific documentation details and reasoning for the `sparsify` limitation in `_base.py`, but completely missed the human reviewer's explicit instruction to remove a change from a different file (`doc/modules/array_api.rst`)."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34077,
+    "title": "FIX metaedata routing with dask backend on joblib",
+    "memory_on_score": {
+      "overlap": 6,
+      "false_positives": 10,
+      "actionability": 4,
+      "reasoning": "The AI accurately identified the significant architectural shift towards dictionary-style metadata routing, which was a core discussion point among human reviewers, but it missed several other specific code changes, clarifications, and documentation suggestions."
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 10,
+      "actionability": 3,
+      "reasoning": "The AI correctly identifies the core architectural changes related to metadata routing and Dask/Joblib backend compatibility, which aligns with the central purpose of the pull request as also recognized by human reviewers."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  },
+  {
+    "pr_number": 33892,
+    "title": "DOC fix colors and add support vectors in SVC with iris dataset example",
+    "memory_on_score": {
+      "overlap": 2,
+      "false_positives": 9,
+      "actionability": 0,
+      "reasoning": "The AI review briefly mentions the plotting of support vectors but completely misses the core human discussion regarding the visual impact, the rationale behind plotting only support vectors versus all data points, and considerations for alternative visualizations."
+    },
+    "memory_off_score": {
+      "overlap": 1,
+      "false_positives": 10,
+      "actionability": 10,
+      "reasoning": "The AI correctly identifies the PR's intent from the docstring change but explicitly states it cannot review the actual code for adding support vectors or fixing colors, which were the central points of discussion for human reviewers."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  },
+  {
+    "pr_number": 33845,
+    "title": "Fix color conversion to rgb hexstring",
+    "memory_on_score": {
+      "overlap": 0,
+      "false_positives": 10,
+      "actionability": 9,
+      "reasoning": "The AI review completely missed all three specific issues raised by human reviewers concerning test file structure, dependencies, and documentation."
+    },
+    "memory_off_score": {
+      "overlap": 0,
+      "false_positives": 9,
+      "actionability": 10,
+      "reasoning": "The AI review completely missed all three specific points raised by human reviewers, which pertained to dependency issues, import placement, and a missing test docstring."
+    },
+    "tag": "convention-relevant"
+  },
+  {
+    "pr_number": 34337,
+    "title": "ENH Newton-CD part 4: Add memory buffer for pointwise gradients and hessians to LinearModelLoss and NewtonCholeskySolver",
+    "memory_on_score": {
+      "overlap": 3,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review identifies the main feature and one minor benefit (memory footprint) but completely misses the core human discussion points regarding necessity, design alternatives, perceived duplication, and specific code refinement suggestions."
+    },
+    "memory_off_score": {
+      "overlap": 8,
+      "false_positives": 9,
+      "actionability": 10,
+      "reasoning": "The AI accurately questions the immediate utility and completeness of the PR by pointing out missing implementation details and a discrepancy between the description and the current code, aligning with the human's initial questions about the necessity and usage of the changes."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  },
+  {
+    "pr_number": 34048,
+    "title": "DOC: Clarify that support vectors in SVMs can be sparse",
+    "memory_on_score": {
+      "overlap": 1,
+      "false_positives": 10,
+      "actionability": 0,
+      "reasoning": "The AI review completely missed the human reviewers' primary concern and actionable suggestion regarding the `support_vectors_` docstring, instead focusing on `coef_` and `dual_coef_`."
+    },
+    "memory_off_score": {
+      "overlap": 1,
+      "false_positives": 10,
+      "actionability": 10,
+      "reasoning": "The AI review entirely missed the concrete suggestion from human reviewers regarding the `support_vectors_` docstring, and instead focused on other docstrings (`coef_` and `dual_coef_`) which were not the primary focus of human feedback."
+    },
+    "tag": "pure logic/wording (not memory-relevant)"
+  }
+]
